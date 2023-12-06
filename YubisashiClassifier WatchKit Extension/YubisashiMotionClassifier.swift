@@ -8,7 +8,7 @@ import Foundation
 import CoreML
 import CoreMotion
 
-protocol YubisashiMotionClassifierDelegate: class {
+protocol YubisashiMotionClassifierDelegate: AnyObject {
     func motionDidDetect(results: [(String, Double)])
 }
 
@@ -68,10 +68,16 @@ class YubisashiMotionClassifier {
     let rotation_z = try! MLMultiArray(
         shape: [predictionWindowSize] as [NSNumber],
         dataType: MLMultiArrayDataType.double)
+    
+    let emptyArray = try! MLMultiArray(
+        shape: [400] as [NSNumber],
+        dataType: MLMultiArrayDataType.double
+    )
 
     private var predictionWindowIndex = 0
 
     func process(deviceMotion: CMDeviceMotion) {
+        print("in process")
 
         if predictionWindowIndex == YubisashiMotionClassifier.predictionWindowSize {
             return
@@ -109,7 +115,8 @@ class YubisashiMotionClassifier {
 //    var stateOut: MLMultiArray? = nil
 
     private func predict() {
-
+        print("start predict")
+        // comment out rotation, no use
         let input = YubisashiClassifier_30Input(
             acceleration_x: acceleration_x,
             acceleration_y: acceleration_y,
@@ -120,19 +127,28 @@ class YubisashiMotionClassifier {
             gravity_x: gravity_x,
             gravity_y: gravity_y,
             gravity_z: gravity_z,
-//            quaternion_w: quaternion_w,
-//            quaternion_x: quaternion_x,
-//            quaternion_y: quaternion_y,
-//            quaternion_z: quaternion_z,
+            quaternion_w: quaternion_w,
+            quaternion_x: quaternion_x,
+            quaternion_y: quaternion_y,
+            quaternion_z: quaternion_z,
             rotation_x: rotation_x,
             rotation_y: rotation_y,
-            rotation_z: rotation_z)
+            rotation_z: rotation_z,
+            stateIn: emptyArray
+        )
+        print(input)
 
-        guard let result = try? model.prediction(input: input) else { return }
-        let sorted = result.labelProbability.sorted {
-            return $0.value > $1.value
+        do {
+            let result = try model.prediction(input: input)
+            print(result)
+
+            let sorted = result.labelProbability.sorted {
+                return $0.value > $1.value
+            }
+
+            delegate?.motionDidDetect(results: sorted)
+        } catch let error {
+            print("Error during prediction: \(error)")
         }
-
-        delegate?.motionDidDetect(results: sorted)
     }
 }

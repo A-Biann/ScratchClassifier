@@ -116,6 +116,7 @@ extension InterfaceController {
 
 extension InterfaceController: YubisashiMotionClassifierDelegate {
     func motionDidDetect(results: [(String, Double)]) {
+        print("Hi")
         print(results)
         if results[0].0 != "yubisashi" || results[0].1 < 0.8 {
             return

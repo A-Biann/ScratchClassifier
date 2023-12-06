@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		934031552B20F218003F75F6 /* YubisashiClassifier 30.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 934031542B20F218003F75F6 /* YubisashiClassifier 30.mlmodel */; };
 		E349F0D0252DC0CC00E001B1 /* YubisashiClassifier WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E349F0CF252DC0CC00E001B1 /* YubisashiClassifier WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E349F0D6252DC0CC00E001B1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E349F0D4252DC0CC00E001B1 /* Interface.storyboard */; };
 		E349F0D8252DC0CC00E001B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E349F0D7252DC0CC00E001B1 /* Assets.xcassets */; };
-		E349F0DF252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E349F0DE252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E349F0E4252DC0CC00E001B1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E349F0E3252DC0CC00E001B1 /* InterfaceController.swift */; };
 		E349F0E6252DC0CC00E001B1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E349F0E5252DC0CC00E001B1 /* ExtensionDelegate.swift */; };
 		E349F0E8252DC0CC00E001B1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E349F0E7252DC0CC00E001B1 /* NotificationController.swift */; };
@@ -19,7 +19,6 @@
 		E349F10A252DC22900E001B1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E349F109252DC22900E001B1 /* HealthKit.framework */; };
 		E349F144252DC43F00E001B1 /* yoshi.png in Resources */ = {isa = PBXBuildFile; fileRef = E349F143252DC43F00E001B1 /* yoshi.png */; };
 		E349F149252DC5E400E001B1 /* YubisashiMotionClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E349F148252DC5E400E001B1 /* YubisashiMotionClassifier.swift */; };
-		E34B360C253203050060C467 /* YubisashiClassifier 30.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E34B360B253203050060C467 /* YubisashiClassifier 30.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,27 +29,9 @@
 			remoteGlobalIDString = E349F0CE252DC0CC00E001B1;
 			remoteInfo = "YubisashiClassifier WatchKit App";
 		};
-		E349F0E0252DC0CC00E001B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E349F0C5252DC0CB00E001B1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E349F0DD252DC0CC00E001B1;
-			remoteInfo = "YubisashiClassifier WatchKit Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E349F0F4252DC0CD00E001B1 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				E349F0DF252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E349F0F8252DC0CD00E001B1 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,12 +46,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		934031542B20F218003F75F6 /* YubisashiClassifier 30.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "YubisashiClassifier 30.mlmodel"; sourceTree = "<group>"; };
 		E349F0CB252DC0CB00E001B1 /* YubisashiClassifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YubisashiClassifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E349F0CF252DC0CC00E001B1 /* YubisashiClassifier WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YubisashiClassifier WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E349F0D5252DC0CC00E001B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		E349F0D7252DC0CC00E001B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E349F0D9252DC0CC00E001B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E349F0DE252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "YubisashiClassifier WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E349F0E3252DC0CC00E001B1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		E349F0E5252DC0CC00E001B1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		E349F0E7252DC0CC00E001B1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -82,7 +63,6 @@
 		E349F109252DC22900E001B1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		E349F143252DC43F00E001B1 /* yoshi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yoshi.png; sourceTree = "<group>"; };
 		E349F148252DC5E400E001B1 /* YubisashiMotionClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YubisashiMotionClassifier.swift; sourceTree = "<group>"; };
-		E34B360B253203050060C467 /* YubisashiClassifier 30.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "YubisashiClassifier 30.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +92,6 @@
 			children = (
 				E349F0CB252DC0CB00E001B1 /* YubisashiClassifier.app */,
 				E349F0CF252DC0CC00E001B1 /* YubisashiClassifier WatchKit App.app */,
-				E349F0DE252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,12 +110,12 @@
 		E349F0E2252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E34B360B253203050060C467 /* YubisashiClassifier 30.mlmodel */,
 				E349F148252DC5E400E001B1 /* YubisashiMotionClassifier.swift */,
 				E349F107252DC22900E001B1 /* YubisashiClassifier WatchKit Extension.entitlements */,
 				E349F0E3252DC0CC00E001B1 /* InterfaceController.swift */,
 				E349F0E5252DC0CC00E001B1 /* ExtensionDelegate.swift */,
 				E349F0E7252DC0CC00E001B1 /* NotificationController.swift */,
+				934031542B20F218003F75F6 /* YubisashiClassifier 30.mlmodel */,
 				E349F0E9252DC0CC00E001B1 /* ComplicationController.swift */,
 				E349F0EB252DC0CD00E001B1 /* Assets.xcassets */,
 				E349F0ED252DC0CD00E001B1 /* Info.plist */,
@@ -178,34 +157,17 @@
 			buildConfigurationList = E349F0F5252DC0CD00E001B1 /* Build configuration list for PBXNativeTarget "YubisashiClassifier WatchKit App" */;
 			buildPhases = (
 				E349F0CD252DC0CC00E001B1 /* Resources */,
-				E349F0F4252DC0CD00E001B1 /* Embed App Extensions */,
+				E349F0DA252DC0CC00E001B1 /* Sources */,
+				E349F0DB252DC0CC00E001B1 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E349F0E1252DC0CC00E001B1 /* PBXTargetDependency */,
 			);
 			name = "YubisashiClassifier WatchKit App";
 			productName = "YubisashiClassifier WatchKit App";
 			productReference = E349F0CF252DC0CC00E001B1 /* YubisashiClassifier WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		E349F0DD252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E349F0F1252DC0CD00E001B1 /* Build configuration list for PBXNativeTarget "YubisashiClassifier WatchKit Extension" */;
-			buildPhases = (
-				E349F0DA252DC0CC00E001B1 /* Sources */,
-				E349F0DB252DC0CC00E001B1 /* Frameworks */,
-				E349F0DC252DC0CC00E001B1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "YubisashiClassifier WatchKit Extension";
-			productName = "YubisashiClassifier WatchKit Extension";
-			productReference = E349F0DE252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -213,16 +175,14 @@
 		E349F0C5252DC0CB00E001B1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					E349F0CA252DC0CB00E001B1 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
 					E349F0CE252DC0CC00E001B1 = {
-						CreatedOnToolsVersion = 12.0.1;
-					};
-					E349F0DD252DC0CC00E001B1 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
 				};
@@ -242,7 +202,6 @@
 			targets = (
 				E349F0CA252DC0CB00E001B1 /* YubisashiClassifier */,
 				E349F0CE252DC0CC00E001B1 /* YubisashiClassifier WatchKit App */,
-				E349F0DD252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -261,15 +220,8 @@
 			files = (
 				E349F144252DC43F00E001B1 /* yoshi.png in Resources */,
 				E349F0D8252DC0CC00E001B1 /* Assets.xcassets in Resources */,
-				E349F0D6252DC0CC00E001B1 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E349F0DC252DC0CC00E001B1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 				E349F0EC252DC0CD00E001B1 /* Assets.xcassets in Resources */,
+				E349F0D6252DC0CC00E001B1 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,11 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E349F149252DC5E400E001B1 /* YubisashiMotionClassifier.swift in Sources */,
-				E34B360C253203050060C467 /* YubisashiClassifier 30.mlmodel in Sources */,
 				E349F0E8252DC0CC00E001B1 /* NotificationController.swift in Sources */,
 				E349F0EA252DC0CC00E001B1 /* ComplicationController.swift in Sources */,
 				E349F0E6252DC0CC00E001B1 /* ExtensionDelegate.swift in Sources */,
 				E349F0E4252DC0CC00E001B1 /* InterfaceController.swift in Sources */,
+				934031552B20F218003F75F6 /* YubisashiClassifier 30.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,11 +248,6 @@
 			isa = PBXTargetDependency;
 			target = E349F0CE252DC0CC00E001B1 /* YubisashiClassifier WatchKit App */;
 			targetProxy = E349F0D1252DC0CC00E001B1 /* PBXContainerItemProxy */;
-		};
-		E349F0E1252DC0CC00E001B1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E349F0DD252DC0CC00E001B1 /* YubisashiClassifier WatchKit Extension */;
-			targetProxy = E349F0E0252DC0CC00E001B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -353,6 +300,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -413,6 +361,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -430,67 +379,26 @@
 			};
 			name = Release;
 		};
-		E349F0F2252DC0CD00E001B1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "YubisashiClassifier WatchKit Extension/YubisashiClassifier WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
-				INFOPLIST_FILE = "YubisashiClassifier WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.YubisashiClassifier.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Debug;
-		};
-		E349F0F3252DC0CD00E001B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "YubisashiClassifier WatchKit Extension/YubisashiClassifier WatchKit Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
-				INFOPLIST_FILE = "YubisashiClassifier WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.YubisashiClassifier.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Release;
-		};
 		E349F0F6252DC0CD00E001B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "YubisashiClassifier WatchKit Extension/YubisashiClassifier WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
-				IBSC_MODULE = YubisashiClassifier_WatchKit_Extension;
+				DEVELOPMENT_TEAM = 87AKR5C5N5;
 				INFOPLIST_FILE = "YubisashiClassifier WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.YubisashiClassifier.watchkitapp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.logger.watch.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
@@ -501,16 +409,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "YubisashiClassifier WatchKit Extension/YubisashiClassifier WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
-				IBSC_MODULE = YubisashiClassifier_WatchKit_Extension;
+				DEVELOPMENT_TEAM = 87AKR5C5N5;
 				INFOPLIST_FILE = "YubisashiClassifier WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.YubisashiClassifier.watchkitapp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.logger.watch.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
@@ -521,11 +434,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
+				DEVELOPMENT_TEAM = 87AKR5C5N5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.YubisashiClassifier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logger.watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -534,11 +447,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5QJR7K89TS;
+				DEVELOPMENT_TEAM = 87AKR5C5N5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.YubisashiClassifier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logger.watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -550,15 +463,6 @@
 			buildConfigurations = (
 				E349F0EF252DC0CD00E001B1 /* Debug */,
 				E349F0F0252DC0CD00E001B1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E349F0F1252DC0CD00E001B1 /* Build configuration list for PBXNativeTarget "YubisashiClassifier WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E349F0F2252DC0CD00E001B1 /* Debug */,
-				E349F0F3252DC0CD00E001B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
