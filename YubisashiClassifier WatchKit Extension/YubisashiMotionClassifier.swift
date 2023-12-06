@@ -77,7 +77,6 @@ class YubisashiMotionClassifier {
     private var predictionWindowIndex = 0
 
     func process(deviceMotion: CMDeviceMotion) {
-        print("in process")
 
         if predictionWindowIndex == YubisashiMotionClassifier.predictionWindowSize {
             return
@@ -121,12 +120,12 @@ class YubisashiMotionClassifier {
             acceleration_x: acceleration_x,
             acceleration_y: acceleration_y,
             acceleration_z: acceleration_z,
-            attitude_pitch: attitude_pitch,
-            attitude_roll: attitude_roll,
-            attitude_yaw: attitude_yaw,
-            gravity_x: gravity_x,
-            gravity_y: gravity_y,
-            gravity_z: gravity_z,
+//            attitude_pitch: attitude_pitch,
+//            attitude_roll: attitude_roll,
+//            attitude_yaw: attitude_yaw,
+//            gravity_x: gravity_x,
+//            gravity_y: gravity_y,
+//            gravity_z: gravity_z,
             quaternion_w: quaternion_w,
             quaternion_x: quaternion_x,
             quaternion_y: quaternion_y,

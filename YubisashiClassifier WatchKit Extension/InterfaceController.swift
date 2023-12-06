@@ -116,12 +116,14 @@ extension InterfaceController {
 
 extension InterfaceController: YubisashiMotionClassifierDelegate {
     func motionDidDetect(results: [(String, Double)]) {
-        print("Hi")
+        print("===== print results =====")
         print(results)
-        if results[0].0 != "yubisashi" || results[0].1 < 0.8 {
+        if results[0].0 == "neutral" || results[0].1 < 0.5 {
+            print("low confidence or no scratch \n")
             return
         }
-        print("Yoshi!")
+        
+        print("Itch!!!!!!!!!!")
         if Date().timeIntervalSince(self.lastYubisashi) <= 1.5 {
             print("too much")
             return
@@ -133,7 +135,7 @@ extension InterfaceController: YubisashiMotionClassifierDelegate {
             self.label.setHidden(true)
             self.imageView.setHidden(false)
             self.labelProbability.setHidden(false)
-            self.labelProbability.setText(String(results[0].1))
+            self.labelProbability.setText(results[0].0 + String(format: "%.2f", results[0].1))
             if self.yubisashiTimer != nil {
                 self.yubisashiTimer?.invalidate()
             }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		934031552B20F218003F75F6 /* YubisashiClassifier 30.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 934031542B20F218003F75F6 /* YubisashiClassifier 30.mlmodel */; };
+		9340315B2B21204C003F75F6 /* YubisashiClassifier 30.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9340315A2B21204C003F75F6 /* YubisashiClassifier 30.mlmodel */; };
 		E349F0D0252DC0CC00E001B1 /* YubisashiClassifier WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E349F0CF252DC0CC00E001B1 /* YubisashiClassifier WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E349F0D6252DC0CC00E001B1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E349F0D4252DC0CC00E001B1 /* Interface.storyboard */; };
 		E349F0D8252DC0CC00E001B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E349F0D7252DC0CC00E001B1 /* Assets.xcassets */; };
@@ -46,7 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		934031542B20F218003F75F6 /* YubisashiClassifier 30.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "YubisashiClassifier 30.mlmodel"; sourceTree = "<group>"; };
+		9340315A2B21204C003F75F6 /* YubisashiClassifier 30.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "YubisashiClassifier 30.mlmodel"; sourceTree = "<group>"; };
 		E349F0CB252DC0CB00E001B1 /* YubisashiClassifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YubisashiClassifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E349F0CF252DC0CC00E001B1 /* YubisashiClassifier WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YubisashiClassifier WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E349F0D5252DC0CC00E001B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 				E349F107252DC22900E001B1 /* YubisashiClassifier WatchKit Extension.entitlements */,
 				E349F0E3252DC0CC00E001B1 /* InterfaceController.swift */,
 				E349F0E5252DC0CC00E001B1 /* ExtensionDelegate.swift */,
+				9340315A2B21204C003F75F6 /* YubisashiClassifier 30.mlmodel */,
 				E349F0E7252DC0CC00E001B1 /* NotificationController.swift */,
-				934031542B20F218003F75F6 /* YubisashiClassifier 30.mlmodel */,
 				E349F0E9252DC0CC00E001B1 /* ComplicationController.swift */,
 				E349F0EB252DC0CD00E001B1 /* Assets.xcassets */,
 				E349F0ED252DC0CD00E001B1 /* Info.plist */,
@@ -235,9 +235,9 @@
 				E349F149252DC5E400E001B1 /* YubisashiMotionClassifier.swift in Sources */,
 				E349F0E8252DC0CC00E001B1 /* NotificationController.swift in Sources */,
 				E349F0EA252DC0CC00E001B1 /* ComplicationController.swift in Sources */,
+				9340315B2B21204C003F75F6 /* YubisashiClassifier 30.mlmodel in Sources */,
 				E349F0E6252DC0CC00E001B1 /* ExtensionDelegate.swift in Sources */,
 				E349F0E4252DC0CC00E001B1 /* InterfaceController.swift in Sources */,
-				934031552B20F218003F75F6 /* YubisashiClassifier 30.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
