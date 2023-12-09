@@ -135,12 +135,9 @@ class YubisashiMotionClassifier {
             rotation_z: rotation_z,
             stateIn: emptyArray
         )
-        print(input)
 
         do {
             let result = try model.prediction(input: input)
-            print(result)
-
             let sorted = result.labelProbability.sorted {
                 return $0.value > $1.value
             }

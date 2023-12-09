@@ -14,10 +14,27 @@ class InterfaceController: WKInterfaceController {
     var workoutSession: HKWorkoutSession?
     let motionManager = CMMotionManager()
     let classifier = YubisashiMotionClassifier()
+    var writer: ResultWriter?
 
     var yubisashi = false
     var lastYubisashi = Date()
     var yubisashiTimer: Timer?
+    
+    var outputTimer: Timer?
+
+    func startTimer() {
+        outputTimer = Timer.scheduledTimer(timeInterval: 100, target: self, selector: #selector(outputTimerAction), userInfo: nil, repeats: true)
+    }
+
+    @objc func outputTimerAction() {
+        DispatchQueue.main.async {
+            self.stopResultWriter()
+        }
+        DispatchQueue.main.async {
+            self.startResultWriter()
+        }
+        
+    }
 
     @IBOutlet weak var labelProbability: WKInterfaceLabel!
     @IBOutlet weak var label: WKInterfaceTextField!
@@ -83,7 +100,9 @@ extension InterfaceController: HKWorkoutSessionDelegate {
     func startWorkout() {
         print(#function)
         DispatchQueue.main.async {
+            self.startResultWriter()
             self.button.setTitle("Stop")
+            self.startTimer()
         }
         startDeviceMotionUpdates()
     }
@@ -92,6 +111,8 @@ extension InterfaceController: HKWorkoutSessionDelegate {
         print(#function)
         DispatchQueue.main.async {
             self.button.setTitle("Start")
+            self.outputTimer?.invalidate()
+            self.outputTimer = nil
         }
         stopDeviceMotionUpdates()
     }
@@ -117,13 +138,23 @@ extension InterfaceController {
 extension InterfaceController: YubisashiMotionClassifierDelegate {
     func motionDidDetect(results: [(String, Double)]) {
         print("===== print results =====")
+        let formatter: DateFormatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd_HHmmss"
+        let outputTime = formatter.string(from: Date())
+        
         print(results)
-        if results[0].0 == "neutral" || results[0].1 < 0.5 {
+        if results[0].0 == "neutral" || results[0].1 < 0.6 {
             print("low confidence or no scratch \n")
+            DispatchQueue.main.async {
+                self.writeResult(outputTime, "neutral")
+            }
             return
         }
         
         print("Itch!!!!!!!!!!")
+        DispatchQueue.main.async {
+            self.writeResult(outputTime, results[0].0)
+        }
         if Date().timeIntervalSince(self.lastYubisashi) <= 1.5 {
             print("too much")
             return
@@ -146,6 +177,32 @@ extension InterfaceController: YubisashiMotionClassifierDelegate {
                 self.imageView.setHidden(true)
                 self.labelProbability.setHidden(true)
             })
+        }
+    }
+}
+
+
+extension InterfaceController {
+    func startResultWriter() {
+        print(#function)
+        writer = ResultWriter()
+        writer?.open(ResultWriter.makeFilePath())
+    }
+
+    func writeResult(_ time: String, _ result: String) {
+        if let writer = self.writer {
+            writer.write(time, result)
+        }
+    }
+
+    func stopResultWriter() {
+        print(#function)
+        if let writer = self.writer {
+            writer.close()
+            if let filePath = writer.filePath {
+                print(filePath)
+            }
+            self.writer = nil
         }
     }
 }
