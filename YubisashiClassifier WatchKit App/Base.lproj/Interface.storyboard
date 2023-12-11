@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17156" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch44"/>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="22155" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch41"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17034"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="22022"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -11,27 +11,29 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="YubisashiClassifier_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <textField width="1" height="199" alignment="center" text="ゆびさしかくにん" id="T6r-O1-TG0"/>
-                        <imageView height="146" alignment="left" hidden="YES" image="yoshi" contentMode="scaleAspectFill" id="oag-gK-49g"/>
+                        <imageView height="116" alignment="left" hidden="YES" image="yoshi" id="oag-gK-49g"/>
                         <label alignment="center" hidden="YES" text="0.0" textAlignment="center" id="u86-K7-2Ep">
                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
                         </label>
+                        <textField width="1" height="116" alignment="center" text="No Scratch Good!" id="T6r-O1-TG0"/>
                         <button width="1" alignment="left" title="Start" id="FJE-Dm-2jz">
                             <connections>
                                 <action selector="onTapButton" destination="AgC-eL-Hgc" id="WLC-1M-WHu"/>
                             </connections>
                         </button>
+                        <button width="1" height="34" alignment="left" title="Number" id="Z38-iV-pd4"/>
                     </items>
                     <connections>
                         <outlet property="button" destination="FJE-Dm-2jz" id="9dn-Wu-py7"/>
                         <outlet property="imageView" destination="oag-gK-49g" id="AHn-CZ-gOW"/>
                         <outlet property="label" destination="T6r-O1-TG0" id="ZR6-yw-CMr"/>
                         <outlet property="labelProbability" destination="u86-K7-2Ep" id="EnV-me-dbf"/>
+                        <outlet property="number" destination="Z38-iV-pd4" id="9dn-CZ-gOW"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="219.52173913043478" y="438.28125"/>
+            <point key="canvasLocation" x="219.45454545454544" y="380.72093023255815"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -66,6 +68,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="yoshi" width="951" height="912"/>
+        <image name="yoshi" width="682" height="351"/>
     </resources>
 </document>

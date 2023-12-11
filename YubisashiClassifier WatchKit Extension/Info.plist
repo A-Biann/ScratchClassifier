@@ -46,5 +46,12 @@
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 	<key>WKWatchOnly</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSFileManagerUsageDescription</key>
+	<string>Need file read/write security</string>
 </dict>
 </plist>
