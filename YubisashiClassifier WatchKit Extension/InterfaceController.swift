@@ -234,7 +234,6 @@ extension InterfaceController {
 
 extension InterfaceController: YubisashiMotionClassifierDelegate {
     func motionDidDetect(results: [(String, Double)]) {
-        print("===== print results =====")
         let formatter: DateFormatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd_HHmmss"
         let outputTime = formatter.string(from: Date())
@@ -242,13 +241,13 @@ extension InterfaceController: YubisashiMotionClassifierDelegate {
         let resultDict = ["time": outputTime, "result": results[0].0]
         judgementResults.append(resultDict)
         
-        print(results)
+//        print(results)
         if results[0].0 == "neutral" || results[0].1 < 0.6 {
             print("low confidence or no scratch \n")
             return
         }
         
-        print("Itch!!!!!!!!!!")
+        print("Itch!!!!!!!!!!  " + results[0].0)
         if Date().timeIntervalSince(self.lastYubisashi) <= 1.5 {
             print("too much")
             return
